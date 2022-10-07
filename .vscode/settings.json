@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/5b7e6242-a12c-46e1-bb95-d90946effc9e/AppServices/subscriptions/5b7e6242-a12c-46e1-bb95-d90946effc9e/resourceGroups/rg-jar-testing/providers/Microsoft.Web/sites/app-jar-testing",
+    "appService.deploySubpath": "target\\java-docs-spring-hello-world-0.0.1-SNAPSHOT.jar"
+}

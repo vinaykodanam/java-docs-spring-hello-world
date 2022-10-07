@@ -1,0 +1,1 @@
+..\..\.\collector-http.bat -a start -c .\Osler-AccessPrivacy\dev\Osler-AccessPrivacy-config-crawler5.xml
