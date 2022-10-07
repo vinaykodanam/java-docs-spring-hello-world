@@ -71,7 +71,7 @@ public class DemoApplication {
 
       
        
-       return Result;
+       return "test";
 		
 	}
 }
