@@ -2,6 +2,7 @@ package com.example.demo;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -27,7 +28,9 @@ public class DemoApplication {
 	@RequestMapping("/")
 	String sayHello()   {
       
-        String FOLDER_PATH = "src\\main\\java\\com\\example\\FilestoRead\\";        
+        String FOLDER_PATH = "."; 
+        Result = FOLDER_PATH;
+        //String FOLDER_PATH = "https://github.com/vinaykodanam/java-docs-spring-hello-world/tree/main/src/main/java/com/example/FilestoRead";        
         Path folderPath = Paths.get(FOLDER_PATH);
 
         // retrieve a list of the files in the folder
@@ -44,8 +47,19 @@ public class DemoApplication {
         // go through the list of files
         for (String file : fileNames) {
             try {
-                // put the file's name and its content into the data structure
-                //List<String> lines = Files.readAllLines(folderPath.resolve(file));
+                        // Execute batch file from java application
+                /*Runtime runtime = Runtime.getRuntime();
+                try {
+                    Process p1 = runtime.exec("cmd /c start "+ file);
+                    InputStream is = p1.getInputStream();
+                    int i = 0;
+                    while( (i = is.read() ) != -1) {
+                        System.out.print((char)i);
+                    }
+                } catch(IOException ioException) {
+                    System.out.println(ioException.getMessage() );
+                }*/
+
                 ProcessBuilder pb = new ProcessBuilder(file);
            
 				try {
@@ -58,7 +72,7 @@ public class DemoApplication {
                         str.append(lines + "\n");
                         Result += "\n" + str.toString()+ "\n";
 					}
-                    //linesOfFiles.put(file, lines);
+                  
 					
 				} catch (Exception e) {
 					return Result = e.getMessage();
