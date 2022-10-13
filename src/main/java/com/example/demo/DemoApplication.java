@@ -2,7 +2,6 @@ package com.example.demo;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -28,7 +27,7 @@ public class DemoApplication {
 	@RequestMapping("/")
 	String sayHello()   {
       
-        String FOLDER_PATH = "."; 
+        String FOLDER_PATH = "src//main//java//com//example//FilestoRead"; 
         Result = FOLDER_PATH;
         //String FOLDER_PATH = "https://github.com/vinaykodanam/java-docs-spring-hello-world/tree/main/src/main/java/com/example/FilestoRead";        
         Path folderPath = Paths.get(FOLDER_PATH);
